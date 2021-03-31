@@ -16,3 +16,12 @@ variable "myip" {
   type    = string
   default = "0.0.0.0/0"
 }
+
+variable "instance-type" {
+  type    = string
+  default = "t3.micro"
+}
+variable "workers-count" {
+  type    = number
+  default = 1
+}

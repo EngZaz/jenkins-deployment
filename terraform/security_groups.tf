@@ -51,7 +51,7 @@ resource "aws_security_group" "jenkins-master-sg" {
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
-# important note here to allow traffic coming from security group is done below, it is not well documented at terraform
+    # important note here to allow traffic coming from security group is done below, it is not well documented at terraform
     security_groups = [aws_security_group.lb-sg.id]
   }
 
