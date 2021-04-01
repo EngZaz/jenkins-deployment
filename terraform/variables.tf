@@ -25,3 +25,8 @@ variable "workers-count" {
   type    = number
   default = 1
 }
+variable "web-port" {
+  type = number
+  description = "the port that will be open on the jenkins ec2"
+  default = 80
+}

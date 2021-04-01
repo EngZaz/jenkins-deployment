@@ -48,8 +48,8 @@ resource "aws_security_group" "jenkins-master-sg" {
   # allow all to access port 8080 but only for traffic coming from the load balancer sg
   ingress {
     description = "allow 8080 from everywhere"
-    from_port   = 8080
-    to_port     = 8080
+    from_port   = var.web-port
+    to_port     = var.web-port
     protocol    = "tcp"
     # important note here to allow traffic coming from security group is done below, it is not well documented at terraform
     security_groups = [aws_security_group.lb-sg.id]
