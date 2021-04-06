@@ -17,11 +17,11 @@ resource "aws_lb_target_group" "app-lb-tg" {
   protocol = "HTTP"
   vpc_id = aws_vpc.vpc_east.id
   health_check {
-    enaenabled          = true 
+    enabled          = true 
     interval            = 10    
     path                = "/"    
     port                = var.web-port
-    matmatcher = "200-299"  
+    matcher = "200-299"  
   }
   tags = {
     "Name" = "Jenkins-target-group"
